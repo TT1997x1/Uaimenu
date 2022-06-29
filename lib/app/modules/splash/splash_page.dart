@@ -27,12 +27,18 @@ class SplashPage extends GetView<SplashController> {
               alignment: Alignment.center,
               child: Column(
                 children: [
+                  const SizedBox(
+                    height: 40,
+                  ),
                   SizedBox(
                     height: context.heightTransformer(reducedBy: 85),
                   ),
                   Image.asset('assets/images/logo1.jpg'),
                   const SizedBox(
                     height: 80,
+                  ),
+                  const SizedBox(
+                    height: 30,
                   ),
                   UaimenuButton(
                     label: 'ACESSAR',

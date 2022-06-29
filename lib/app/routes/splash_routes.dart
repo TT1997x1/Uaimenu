@@ -7,7 +7,7 @@ class SplashRouters {
 
   static final routers = <GetPage>[
     GetPage(
-      name: '/',
+      name: '/splash',
       binding: SplashBindings(),
       page: () => const SplashPage(),
     )

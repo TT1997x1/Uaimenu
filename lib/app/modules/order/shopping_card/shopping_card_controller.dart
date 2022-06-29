@@ -41,7 +41,7 @@ class ShoppingCardController extends GetxController {
         quantity: shoppingCardModel.quantity - 1);
   }
 
-  void clear() => _shoppingService.Clear();
+  void clear() => _shoppingService.clear();
 
   Future<void> createOrder() async {
     final userId = _authService.getUserId();

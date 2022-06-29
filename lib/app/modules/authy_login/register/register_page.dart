@@ -21,12 +21,14 @@ class _RegisterPageState
   final _nameEC = TextEditingController();
   final _emailEC = TextEditingController();
   final _passwordEC = TextEditingController();
+  final _telefone = TextEditingController();
 
   @override
   void dispose() {
     _nameEC.dispose();
     _emailEC.dispose();
     _passwordEC.dispose();
+    _telefone.dispose();
     super.dispose();
   }
 
@@ -53,11 +55,11 @@ class _RegisterPageState
                         color: context.theme.primaryColorDark),
                   ),
                   Text(
-                    'Preencha os campos a baixo para realizar o cadastro',
+                    'Preencha os campos a baixo para realizar o cadastro !',
                     style: context.textTheme.bodyText1,
                   ),
                   const SizedBox(
-                    height: 60,
+                    height: 40,
                   ),
                   UaimenuTextformfield(
                     label: 'Nome',
@@ -65,10 +67,7 @@ class _RegisterPageState
                     validator: Validatorless.required(' Nome obrigatório'),
                   ),
                   const SizedBox(
-                    height: 10,
-                  ),
-                  const SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   UaimenuTextformfield(
                     label: 'E-mail',
@@ -77,6 +76,14 @@ class _RegisterPageState
                       Validatorless.required('E-mail obrigatório'),
                       Validatorless.email('E-mail inválido')
                     ]),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  UaimenuTextformfield(
+                    label: 'Telefone',
+                    controller: _telefone,
+                    validator: Validatorless.required('Telefone obrigatório'),
                   ),
                   const SizedBox(
                     height: 20,
@@ -111,6 +118,7 @@ class _RegisterPageState
                   ),
                   Center(
                       child: UaimenuButton(
+                          width: context.widthTransformer(reducedBy: 30),
                           label: 'Cadastrar',
                           onPressed: () {
                             final formValid =

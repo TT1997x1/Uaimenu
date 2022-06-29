@@ -1,4 +1,3 @@
-import 'package:application_uaimenu/app/core/ui/widgets/icon_badge.dart';
 import 'package:application_uaimenu/app/core/ui/widgets/uaimenu_appbar.dart';
 import 'package:application_uaimenu/app/modules/home/home_controller.dart';
 import 'package:flutter/material.dart';

@@ -34,5 +34,5 @@ class ShoppingService extends GetxService {
     }
   }
 
-  void Clear() => _shoppingCard.clear();
+  void clear() => _shoppingCard.clear();
 }

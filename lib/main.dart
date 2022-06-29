@@ -20,6 +20,7 @@ class Uaimenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Uai Menu',
       theme: UaimenuUi.theme,
       initialBinding: ApplicationBinding(),
