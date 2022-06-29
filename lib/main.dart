@@ -2,6 +2,8 @@ import 'package:application_uaimenu/app/core/bindigs/bindigs/applicantion_bindig
 import 'package:application_uaimenu/app/core/ui/uaimenu_ui.dart';
 import 'package:application_uaimenu/app/routes/auth_routes.dart';
 import 'package:application_uaimenu/app/routes/home_routes.dart';
+import 'package:application_uaimenu/app/routes/orders_router.dart';
+import 'package:application_uaimenu/app/routes/product_routes.dart';
 import 'package:application_uaimenu/app/routes/splash_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,6 +27,8 @@ class Uaimenu extends StatelessWidget {
         ...SplashRouters.routers,
         ...AuthRouters.routers,
         ...HomeRouters.routers,
+        ...ProductDeitailRouters.routers,
+        ...OrdersRouter.routers
       ],
     );
   }

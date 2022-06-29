@@ -15,7 +15,6 @@ class RegisterPage extends StatefulWidget {
   State<RegisterPage> createState() => _RegisterPageState();
 }
 
-
 class _RegisterPageState
     extends UaimenuState<RegisterPage, RegisterController> {
   final _formKey = GlobalKey<FormState>();
@@ -117,7 +116,7 @@ class _RegisterPageState
                             final formValid =
                                 _formKey.currentState?.validate() ?? false;
                             if (formValid) {
-                              Controller.register(
+                              controller.register(
                                 name: _nameEC.text,
                                 email: _emailEC.text,
                                 password: _passwordEC.text,

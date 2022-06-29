@@ -4,10 +4,8 @@ import 'package:application_uaimenu/app/core/ui/widgets/uaimenu_appbar.dart';
 import 'package:application_uaimenu/app/core/ui/widgets/uaimenu_button.dart';
 import 'package:application_uaimenu/app/core/ui/widgets/uaimenu_textformsfild.dart';
 import 'package:application_uaimenu/app/modules/authy_login/login/login_controller.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_utils/src/extensions/context_extensions.dart';
 import 'package:validatorless/validatorless.dart';
 
 class LoginPage extends StatefulWidget {
@@ -90,7 +88,7 @@ class _LoginPageState extends UaimenuState<LoginPage, LoginController> {
                                       _formKey.currentState?.validate() ??
                                           false;
                                   if (formValid) {
-                                    Controller.login(
+                                    controller.login(
                                       email: _emailEC.text,
                                       password: _passwordEC.text,
                                     );

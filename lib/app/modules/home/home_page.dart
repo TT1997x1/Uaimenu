@@ -1,4 +1,4 @@
-import 'package:application_uaimenu/app/core/services/auth_services.dart';
+import 'package:application_uaimenu/app/core/ui/widgets/icon_badge.dart';
 import 'package:application_uaimenu/app/core/ui/widgets/uaimenu_appbar.dart';
 import 'package:application_uaimenu/app/modules/home/home_controller.dart';
 import 'package:flutter/material.dart';
@@ -15,12 +15,17 @@ class HomePage extends GetView<HomeController> {
         return BottomNavigationBar(
           onTap: (value) => controller.tabIndex = value,
           currentIndex: controller.tabIndex,
-          items: [
-            const BottomNavigationBarItem(
-                icon: Icon(Icons.list), label: 'produtos'),
-            const BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart), label: 'Carrinho'),
-            const BottomNavigationBarItem(
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.list), label: 'produtos'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.shopping_cart),
+                // BottomNavigationBarItem(
+                // icon: IconBadge(
+                //   icon: Icons.shopping_cart,
+                //   number: controller.totalProductsInShoppingCard,
+                // ),
+                label: 'Carrinho'),
+            BottomNavigationBarItem(
                 icon: Icon(Icons.exit_to_app), label: 'Sair'),
           ],
         );

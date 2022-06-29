@@ -2,9 +2,8 @@ import 'dart:developer';
 
 import 'package:application_uaimenu/app/core/exception_user_exception.dart';
 import 'package:application_uaimenu/app/core/restClient/rest_client.dart';
-import 'package:application_uaimenu/app/modules/authy_login/login_page.dart';
 import 'package:application_uaimenu/app/moldes/user_moldes.dart';
-import 'package:application_uaimenu/app/repositores/auth_repository_iml.dart';
+import 'package:application_uaimenu/app/repositores/auth_repository_implements.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   final RestClient _restClient;

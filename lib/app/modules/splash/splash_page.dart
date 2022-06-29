@@ -1,10 +1,7 @@
 import 'package:application_uaimenu/app/core/ui/widgets/uaimenu_button.dart';
 import 'package:application_uaimenu/app/modules/splash/splash_controller.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:get/get.dart';
-import 'package:get/get_utils/src/extensions/context_extensions.dart';
 
 class SplashPage extends GetView<SplashController> {
   const SplashPage({Key? key}) : super(key: key);

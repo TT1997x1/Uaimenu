@@ -1,6 +1,4 @@
 import 'dart:developer';
-import 'dart:html';
-
 import 'package:application_uaimenu/app/core/mixins/loader_mixins.dart';
 import 'package:application_uaimenu/app/core/mixins/messagen_mixins.dart';
 import 'package:application_uaimenu/app/moldes/product_model.dart';
@@ -46,5 +44,19 @@ class MenuController extends GetxController with LoaderMixin, MessagesMixin {
   Future<void> findAllProducts() async {
     final products = await _productRepository.findAll();
     menu.assignAll(products);
+  }
+
+  Future<void> refreshPage() async {
+    try {
+      await findAllProducts();
+    } catch (e, s) {
+      log('Erro ao buscar produtos', error: e, stackTrace: s);
+      _message(
+        MessageModel(
+            title: 'Erro',
+            message: 'Erro ao buscar menu',
+            type: MessageType.error),
+      );
+    }
   }
 }

@@ -5,12 +5,11 @@ import 'package:get/get.dart';
 class SplashRouters {
   SplashRouters._();
 
-  static final routers = <GetPage> [
+  static final routers = <GetPage>[
     GetPage(
-      name: '/', 
+      name: '/',
       binding: SplashBindings(),
       page: () => const SplashPage(),
-      )
+    )
   ];
-  
 }

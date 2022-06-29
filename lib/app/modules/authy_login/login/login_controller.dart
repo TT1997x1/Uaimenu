@@ -1,12 +1,9 @@
 import 'dart:developer';
-import 'dart:ffi';
-import 'dart:html';
-
 import 'package:application_uaimenu/app/core/constants/constants.dart';
 import 'package:application_uaimenu/app/core/exception_user_exception.dart';
 import 'package:application_uaimenu/app/core/mixins/loader_mixins.dart';
 import 'package:application_uaimenu/app/core/mixins/messagen_mixins.dart';
-import 'package:application_uaimenu/app/repositores/auth_repository_iml.dart';
+import 'package:application_uaimenu/app/repositores/auth_repository_implements.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
