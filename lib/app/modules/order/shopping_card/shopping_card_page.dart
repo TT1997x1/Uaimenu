@@ -71,6 +71,9 @@ class ShoppingCardPage extends GetView<ShoppingCardController> {
                             ],
                           ),
                         ),
+                        const SizedBox(
+                          height: 10,
+                        ),
                         Obx(() {
                           return Column(
                               children: controller.products
